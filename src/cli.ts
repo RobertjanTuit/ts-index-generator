@@ -5,6 +5,7 @@ import program from 'commander';
 import { clearIndexes, getIndexes } from './helpers';
 
 const pkg = (fs.existsSync('./package.json')) ? require('./package.json') : require('../package.json');
+
 program
   .version(pkg.version)
   .option('-i, --ignore [patterns...]', 'Ignored file patterns', s => s.split(','), [])
