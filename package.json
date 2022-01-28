@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "npx rimraf dist && tsc --incremental false",
-    "lint": "eslint '{src,scripts}/**/*.{ts,js}'",
+    "lint": "eslint src/**/* scripts/**/*",
     "prepare": "npm run build && node ./scripts/packageDist.js",
     "release": "standard-version --no-verify --release-as",
     "start": "npm run watch",
