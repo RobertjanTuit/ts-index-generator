@@ -16,9 +16,9 @@
     "url": "https://github.com/elclanrs/ts-index-generator.git"
   },
   "scripts": {
-    "build": "rm -rf dist && tsc --incremental false",
+    "build": "npx rimraf dist && tsc --incremental false",
     "lint": "eslint '{src,scripts}/**/*.{ts,js}'",
-    "prepare": "npm run build && ./scripts/packageDist.js",
+    "prepare": "npm run build && node ./scripts/packageDist.js",
     "release": "standard-version --no-verify --release-as",
     "start": "npm run watch",
     "test": "ava -w",
@@ -43,6 +43,7 @@
     "husky": "^3.0.1",
     "lodash": "^4.17.15",
     "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "standard-version": "^6.0.1",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"

@@ -1,4 +1,3 @@
-/dist
 /test/**/index.ts
 /tmp
 /out-tsc
