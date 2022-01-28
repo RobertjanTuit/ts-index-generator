@@ -4,8 +4,7 @@ import fs from 'fs';
 import program from 'commander';
 import { clearIndexes, getIndexes } from './helpers';
 
-const pkg = require('../package.json'); // eslint-disable-line @typescript-eslint/no-var-requires
-
+const pkg = (fs.existsSync('./package.json')) ? require('./package.json') : require('../package.json');
 program
   .version(pkg.version)
   .option('-i, --ignore [patterns...]', 'Ignored file patterns', s => s.split(','), [])

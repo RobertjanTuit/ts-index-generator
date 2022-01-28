@@ -1,11 +1,12 @@
 {
-  "name": "ts-index-generator",
-  "version": "1.0.0-beta.2",
+  "name": "@_rj_/ts-index-generator",
+  "version": "1.0.0-beta.4",
   "description": "Generate index.ts for your TypeScript project",
   "main": "index.js",
   "types": "index.d.ts",
   "author": "author",
   "license": "MIT",
+  "private": false,
   "keywords": [
     "typescript",
     "index",
@@ -20,7 +21,7 @@
     "lint": "eslint src/**/* scripts/**/* test/**/* --fix",
     "prepare": "npm run build && node ./scripts/packageDist.js",
     "release": "standard-version --no-verify --release-as",
-    "publish": "cd dist && npm publish @_rj_/ts-index-generator",
+    "publish-to-npm": "cd dist && npm publish",
     "start": "npm run watch",
     "test": "ava -w",
     "test-single": "ava",

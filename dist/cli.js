@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = __importDefault(require("fs"));
 var commander_1 = __importDefault(require("commander"));
 var helpers_1 = require("./helpers");
-var pkg = require('../package.json'); // eslint-disable-line @typescript-eslint/no-var-requires
+var pkg = (fs_1.default.existsSync('./package.json')) ? require('./package.json') : require('../package.json');
 commander_1.default
     .version(pkg.version)
     .option('-i, --ignore [patterns...]', 'Ignored file patterns', function (s) { return s.split(','); }, [])
