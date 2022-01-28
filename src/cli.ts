@@ -4,7 +4,7 @@ import fs from 'fs';
 import program from 'commander';
 import { clearIndexes, getIndexes } from './helpers';
 
-const pkg = (fs.existsSync('./package.json')) ? require('./package.json') : require('../package.json');
+const pkg = (fs.existsSync('./package.json')) ? require('./package.json') : require('../package.json'); // eslint-disable-line import/no-unresolved
 
 program
   .version(pkg.version)
