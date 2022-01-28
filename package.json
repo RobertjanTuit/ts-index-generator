@@ -13,13 +13,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/elclanrs/ts-index-generator.git"
+    "url": "https://github.com/robertjantuit/ts-index-generator.git"
   },
   "scripts": {
     "build": "npx rimraf dist && tsc --incremental false",
     "lint": "eslint src/**/* scripts/**/* test/**/* --fix",
     "prepare": "npm run build && node ./scripts/packageDist.js",
     "release": "standard-version --no-verify --release-as",
+    "publish": "cd dist && npm publish @_rj_/ts-index-generator",
     "start": "npm run watch",
     "test": "ava -w",
     "test-single": "ava",

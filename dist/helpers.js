@@ -18,7 +18,7 @@ function clearIndexes(rootPath) {
 exports.clearIndexes = clearIndexes;
 function getIndexes(rootPath, _a) {
     var _b = _a.ignore, ignore = _b === void 0 ? [] : _b;
-    var files = glob_1.default.sync(rootPath + "/**/*.[ts|tsx]", {
+    var files = glob_1.default.sync(rootPath + "/**/*.(ts|tsx)", {
         nodir: true,
         ignore: ['**/index.ts'].concat(ignore),
     });
